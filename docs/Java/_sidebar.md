@@ -1,4 +1,3 @@
 - 目录
 
-  - [一级目录Java](Java.md)
-- 建站教程
+  - [Java学习之路](Java.md)
