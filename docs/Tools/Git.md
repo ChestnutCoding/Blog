@@ -13,54 +13,100 @@ git config --global user.name "username"
 ```bash
 git config --global user.email "email"
  ```
-### 本地仓库搭建
+### Git日常操作流程
+1. 克隆远程仓库
 ```bash
-git init
- ```
-### 克隆远程仓库
+  git clone <远程仓库的网址> 
+```
+2. git add 添加到暂存区
 ```bash
-git clone [url]
- ```
-### 查看文件状态
-#### 查看指定文件状态
+  git add --all # 当前项目下的所有更改
+```
+ ```bash
+  git add .  # 当前目录下的所有更改
+```
+ ```bash
+  git add xx/xx.py xx/xx2.py  # 添加某几个文件
+```
+3. 提交到本地仓库
 ```bash
-git status [filename]
- ```
-#### 查看所有文件状态
+  git commit -m"描述信息"
+```
+4. 推送到远程仓库
 ```bash
-git status
- ```
-### 分支命令
-#### 列出所有分支
+  git push -u origin master # 第一次需要关联上
 ```
-git branch
+```bash
+  git push
 ```
-#### 列出所有远程分支
+```bash
+  git push -f orgin master # 强制覆盖远程分支
 ```
-git branch -r
+
+### Git新建本地关联仓库
+1. 初始化本地仓库
+```bash
+  git init
 ```
-#### 新建分支
+2. 添加远程仓库
+```bash
+  git remote add <远程仓库的别名> <远程仓库的URL地址>
 ```
-git branch [branchname]
+3. git add 添加到暂存区
+```bash
+  git add --all # 当前项目下的所有更改
 ```
-#### 新建一个分支，停留在原分支
+ ```bash
+  git add .  # 当前目录下的所有更改
 ```
-git checkout [branchname]
+ ```bash
+  git add xx/xx.py xx/xx2.py  # 添加某几个文件
 ```
-#### 新建一个分支并切换分支
+4. 提交到本地仓库
+```bash
+  git commit -m"描述信息"
 ```
-git checkout -b [branchname]
+5. 推送到远程仓库
+```bash
+  git push -u origin master
 ```
-#### 合并指定分支到当前分支
+### 切换合并分支
+1. 查看分支
+```bash
+  git branch # 列出所有本地分支
 ```
-git merge [branchname]
+```bash
+  git branch -r # 列出所有远程分支
 ```
-#### 删除分支
+```bash
+  git branch -a # 列出所有本地分支和远程分支
 ```
-git branch -d [branchname]
+2. 创建分支
+```bash
+  git checkout -b <new-branch-name>
+  #如果仅新建，不切换，则去掉参数 -b
 ```
-#### 删除远程分支
+3. 切换分支
+```bash
+  git checkout <branch-name>
 ```
-git push origin --delete [branchname]
-git branch -dr [remote/branchname]
+4. 把副分支合并到主分支
+```bash
+  git merge <branch-name>
+```
+5. 删除本地分支
+```bash
+  git branch -d <branch-name>
+```
+6. 删除远程分支
+```bash
+  git push origin --delete <branch-name>
+```
+```bash
+  # 删除远程分支后，本地分支还存在，需要执行以下命令
+  git remote prune origin
+```
+7. 新建远程分支
+```bash
+  git push origin <branch-name>
 ```
