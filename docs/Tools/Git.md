@@ -92,7 +92,10 @@ git config --global user.email "email"
 ```
 4. 把副分支合并到主分支
 ```bash
-  git merge <branch-name>
+  git checkout <主分支> # 切换至主分支
+```
+```bash
+  git merge <副分支> # 将副分支合并到主分支
 ```
 5. 删除本地分支
 ```bash
@@ -103,8 +106,8 @@ git config --global user.email "email"
   git push origin --delete <branch-name>
 ```
 ```bash
-  # 删除远程分支后，本地分支还存在，需要执行以下命令
   git remote prune origin
+  # 删除远程分支后，更新本地无效分支
 ```
 7. 新建远程分支
 ```bash
