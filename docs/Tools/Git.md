@@ -8,11 +8,11 @@ Git is a free and open source distributed version control system designed to han
 #### 配置用户名
 ```bash
 git config --global user.name "username"
- ```
+```
 #### 配置邮箱
 ```bash
 git config --global user.email "email"
- ```
+```
 ### Git日常操作流程
 1. 克隆远程仓库
 ```bash
@@ -24,10 +24,10 @@ git config --global user.email "email"
 ```
  ```bash
   git add .  # 当前目录下的所有更改
-```
+ ```
  ```bash
   git add xx/xx.py xx/xx2.py  # 添加某几个文件
-```
+ ```
 3. 提交到本地仓库
 ```bash
   git commit -m"描述信息"
@@ -58,10 +58,10 @@ git config --global user.email "email"
 ```
  ```bash
   git add .  # 当前目录下的所有更改
-```
+ ```
  ```bash
   git add xx/xx.py xx/xx2.py  # 添加某几个文件
-```
+ ```
 4. 提交到本地仓库
 ```bash
   git commit -m"描述信息"
@@ -112,4 +112,8 @@ git config --global user.email "email"
 7. 新建远程分支
 ```bash
   git push origin <branch-name>
+```
+8. 修改本地分支名
+```
+ git branch -m oldName newName
 ```

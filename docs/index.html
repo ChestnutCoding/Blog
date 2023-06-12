@@ -23,7 +23,28 @@
   <!-- alert 样式 -->
   <link rel="stylesheet" href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" type='text/css'
     media='all' />
+  <style>
+    /* 加重描述 strong*/
+    .markdown-section strong {
+      color: rgb(239, 112, 96);
+    }
 
+    /*添加代码块复制按钮样式*/
+    .docsify-copy-code-button {
+      background: #00a1d6 !important;
+      color: #FFFFFF !important;
+      font-size: 13px !important;
+    }
+
+    ::after {
+      color: #9da2fd !important;
+      font-size: 13px !important;
+    }
+
+    .markdown-section>p {
+      font-size: 16px !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -38,7 +59,7 @@
       // 仓库地址，点击右上角的Github章鱼猫头像会跳转到此地址
       repo: 'https://github.com/ChestnutCoding',
       // 侧边栏支持，默认加载的是项目根目录下的_sidebar.md文件
-      loadSidebar: true,
+      // loadSidebar: true,
       // 导航栏支持，默认加载的是项目根目录下的_navbar.md文件
       loadNavbar: true,
       // 封面支持，默认加载的是项目根目录下的_coverpage.md文件
@@ -105,13 +126,16 @@
   <!-- 搜索功能支持 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <!-- 复制到剪贴板 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="https://notebook.js.org/plugin/docsify-copy-code.min.js"></script>
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script> -->
   <!-- 上下章节 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <!-- 表情插件 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
   <!-- 右侧目录 -->
   <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
+  <!-- 代码块样式优化-->
+  <script src="https://notebook.js.org/plugin/prism-c.js"></script>
   <!-- 代码高亮 -->
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
