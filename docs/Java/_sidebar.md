@@ -1,1 +1,1 @@
-- [Java学习之路](Java.md)
+- [Java学习](Java.md)
